@@ -1,0 +1,7 @@
+#!/bin/fish
+echo ""
+echo ""
+
+neofetch
+
+cat ~/.logo
