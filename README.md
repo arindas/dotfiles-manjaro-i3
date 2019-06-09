@@ -7,10 +7,7 @@ following desktop:
 
 ```
 OS: Manjaro Linux x86_64
-Host: HP Pavilion x360 Convertible 14-ba0xx
 Kernel: 4.19.45-1-MANJARO
-Uptime: 58 mins
-Packages: 1555 (pacman)
 Shell: fish 3.0.2
 Resolution: 1920x1080
 WM: i3 gaps
