@@ -1,0 +1,12 @@
+[Game]
+Name_Pl1=Arindam Das
+Name_Pl2=Player 2
+
+[KgDifficulty]
+Level=Easy
+
+[MainWindow]
+Height 1080=480
+State=AAAA/wAAAAD9AAAAAAAAArwAAAGlAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=700

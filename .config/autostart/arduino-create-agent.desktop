@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=0.9.4
+Name=arduino-create-agent
+Comment=
+Icon=/mnt/C49EA2229EA20D4C/applications/ArduinoCreateAgent-1.1/InstallerIcon.png
+Exec=/mnt/C49EA2229EA20D4C/applications/ArduinoCreateAgent-1.1/Arduino_Create_Bridge
+Terminal=false

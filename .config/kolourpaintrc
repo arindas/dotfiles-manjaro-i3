@@ -1,0 +1,59 @@
+[File/Save As]
+Forced MimeType=image/png
+Forced Quality=75
+
+[General Settings]
+First Time=false
+Last Document Size=614,1093
+Open Images in the Same Window=false
+Resize Scale - Last Keep Aspect=true
+Resize Scale - ScaleType=2
+
+[KFileDialog Settings]
+Height 1080=526
+Recent Files[$e]=file:$HOME/Downloads/media_player_backdrop.png,file:$HOME/Downloads/media_player_backdrop.png
+Recent URLs[$e]=file:$HOME/Downloads/
+Width 1920=960
+
+[MainWindow]
+Height 1080=1027
+State=AAAA/wAAAAD9AAAAAQAAAAMAAAcoAAAAaPwBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAFgAAAcoAAACCwD///8AAAcoAAADMAAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAuz/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1920=1920
+
+[MainWindow][Toolbar Tool Box]
+ToolButtonStyle=IconOnly
+
+[MimeType Properties Version 1.2-3]
+Configurable Color Depth=image/png,image/bmp,image/x-pcx,image/x-rgb,image/x-xpixmap
+Configurable Quality Setting=image/jp2,image/jpeg,image/x-webp
+Maximum Color Depth=image/x-eps:32,image/x-portable-bitmap:1,image/x-portable-graymap:8,image/x-xbitmap:1
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/shifaaz-shamoon-1113391-unsplash.jpg
+File2[$e]=$HOME/Downloads/media_player_backdrop.png
+Name1[$e]=shifaaz-shamoon-1113391-unsplash.jpg
+Name2[$e]=media_player_backdrop.png
+
+[Text Settings]
+Font Family=Monospace
+
+[Tool Settings]
+Last Used Tool=13
+Tool Widget Brush Col=0
+Tool Widget Brush Row=0
+Tool Widget Eraser Size Col=0
+Tool Widget Eraser Size Row=1
+Tool Widget Fill Style Col=0
+Tool Widget Fill Style Row=0
+Tool Widget Line Width Col=0
+Tool Widget Line Width Row=0
+Tool Widget Opaque/Transparent Col=0
+Tool Widget Opaque/Transparent Row=0
+Tool Widget Spraycan Size Col=0
+Tool Widget Spraycan Size Row=0
+
+[Undo/Redo Settings]
+Max Limit=500
+Max Limit Size Limit=16777216
+Min Limit=10
