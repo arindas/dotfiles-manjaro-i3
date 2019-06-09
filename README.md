@@ -5,7 +5,7 @@ following desktop:
 
 ![screenshot](https://github.com/arindas/dotfiles/blob/master/Pictures/screenshots/2019-06-09_12:23:36.png)
 
-
+```
 OS: Manjaro Linux x86_64
 Host: HP Pavilion x360 Convertible 14-ba0xx
 Kernel: 4.19.45-1-MANJARO
@@ -21,3 +21,4 @@ Terminal Font: DejaVu Sans Mono for Powerline
 CPU: Intel i5-7200U (4) @ 3.100GHz
 GPU: Intel HD Graphics 620
 Memory: 1162MiB / 7849MiB
+```
