@@ -13,7 +13,7 @@ Uptime: 58 mins
 Packages: 1555 (pacman)
 Shell: fish 3.0.2
 Resolution: 1920x1080
-WM: i3
+WM: i3 gaps
 Theme: Adapta-Nokto-Eta-Maia [GTK2/3]
 Icons: Paper-Mono-Dark [GTK2/3]
 Terminal: urxvt
