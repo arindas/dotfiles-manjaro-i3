@@ -13,6 +13,6 @@ Resolution: 1920x1080
 WM: i3 gaps
 Theme: Adapta-Nokto-Eta-Maia [GTK2/3]
 Icons: Paper-Mono-Dark [GTK2/3]
-Terminal: urxvt
-Terminal Font: DejaVu Sans Mono for Powerline
+Terminal: alacritty
+Terminal Font: Noto Sans 10
 ```
