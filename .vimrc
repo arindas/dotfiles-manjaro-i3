@@ -39,6 +39,12 @@ Plugin 'crucerucalin/qml.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'vim-scripts/taglist.vim'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'ryanoasis/vim-devicons'
+
 Plugin 'morhetz/gruvbox'
 " Plugin 'edkolev/promptline.vim'
 
@@ -105,5 +111,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox'
 let g:gruvbox_italic = 1
 colorscheme gruvbox
+set background=dark
 " set t_Co=256
-autocmd VimEnter * hi Normal ctermbg=none 
+" autocmd VimEnter * hi Normal ctermbg=none
+" set t_ut =
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+
+let g:Tlist_Use_Right_Window   = 1
+let g:Tlist_Enable_Fold_Column = 0
+autocmd BufEnter,CursorMoved,CursorMovedI * silent! TlistHighlightTag
