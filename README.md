@@ -3,7 +3,7 @@
 This repository contains all the [dot]config files for the
 following desktop:
 
-![screenshot](https://github.com/arindas/dotfiles/blob/master/Pictures/superscreenshot.png)
+![screenshot](https://github.com/arindas/dotfiles/blob/master/Pictures/superscreenshot.jpg)
 
 ```
 OS: Manjaro Linux x86_64
