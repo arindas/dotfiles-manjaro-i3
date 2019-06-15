@@ -1,7 +1,2 @@
-#!/bin/fish
-echo ""
-echo ""
-
-neofetch
-
-cat ~/.logo
+#!/usr/bin/fish 
+neofetch --w3m ~/Pictures/DesktopBackground/wallhaven-wy1lyr.jpg --loop 
