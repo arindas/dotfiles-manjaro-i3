@@ -3,7 +3,7 @@
 This repository contains all the [dot]config files for the
 following desktop:
 
-![screenshot](https://github.com/arindas/dotfiles/blob/master/Pictures/2019-06-16_18:22:12.png)
+![screenshot](https://github.com/arindas/dotfiles/blob/master/Pictures/screenshots/2019-06-16_18:22:12.png)
 
 ```
 OS: Manjaro Linux x86_64
@@ -15,8 +15,7 @@ Theme: Adapta-Nokto-Eta-Maia [GTK2/3]
 Icons: Paper-Mono-Dark [GTK2/3]
 Terminal: alacritty
 Terminal Font: Noto Sans 10
-
+```
 Wallpaper: [wallpaper](https://github.com/arindas/dotfiles/blob/master/Pictures/DesktopBackground/wallhaven-wy1lyr.jpg)
 
-```
 
