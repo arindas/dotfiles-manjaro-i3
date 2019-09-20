@@ -31,6 +31,8 @@ Plugin 'udalov/kotlin-vim'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'rust-lang/rust.vim'
+
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'crucerucalin/qml.vim'
@@ -39,13 +41,35 @@ Plugin 'crucerucalin/qml.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'vim-scripts/taglist.vim'
+" Plugin 'vim-scripts/taglist.vim'
 
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
+
+Plugin 'Shougo/vimfiler.vim' 
+
+Plugin 'Shougo/unite.vim'
 
 Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'morhetz/gruvbox'
+
+Plugin 'majutsushi/tagbar'
+
+Plugin 'dag/vim-fish'
+
+Plugin 'edkolev/tmuxline.vim'
+
+Plugin 'bfrg/vim-cpp-modern'
+
+Plugin 'Yggdroot/indentLine'
+
+" Plugin 'terryma/vim-smooth-scroll'
+
+" Plugin 'prabirshrestha/async.vim'
+" Plugin 'prabirshrestha/vim-lsp'
+
+" Plugin 'liuchengxu/vista.vim'
+
 " Plugin 'edkolev/promptline.vim'
 
 " All of your Plugins must be added before the following line
@@ -64,22 +88,36 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on
-set title
-set autoindent
-set number
-set shiftwidth=4
-set tabstop=4
+set title 
+set number 
 set mouse=a
-" set statusline+=%F
+
+set tabstop=2
+set softtabstop=2 
+set shiftwidth=2
+set expandtab 
+
 set laststatus=2
 set noshowmode
 set hidden
+set ttymouse=sgr
+
+set cursorline 
+
+set nowrap
+set wildmenu
+
+set relativenumber 
+
+set fillchars+=vert:\ 
 
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+let g:python_recommended_style = 0
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -109,15 +147,59 @@ let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme = 'gruvbox'
-let g:gruvbox_italic = 1
-colorscheme gruvbox
-set background=dark
-" set t_Co=256
-" autocmd VimEnter * hi Normal ctermbg=none
-" set t_ut =
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
 
-let g:Tlist_Use_Right_Window   = 1
-let g:Tlist_Enable_Fold_Column = 0
-autocmd BufEnter,CursorMoved,CursorMovedI * silent! TlistHighlightTag
+let b:airline_whitespace_disabled = 1
+
+let g:gruvbox_italic = 1
+set background=dark
+colorscheme gruvbox
+
+
+let g:tagbar_compact = 1
+
+" Hide end of buffer markers
+highlight EndOfBuffer ctermfg=bg 
+
+
+let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
+let g:tagbar_type_rust = {
+  \ 'ctagsbin' : '/usr/bin/ctags',
+  \ 'ctagstype' : 'rust',
+  \ 'kinds' : [
+      \ 'n:modules',
+      \ 's:structures:1',
+      \ 'i:interfaces',
+      \ 'c:implementations',
+      \ 'f:functions:1',
+      \ 'g:enumerations:1',
+      \ 't:type aliases:1:0',
+      \ 'v:constants:1:0',
+      \ 'M:macros:1',
+      \ 'm:fields:1:0',
+      \ 'e:enum variants:1:0',
+      \ 'P:methods:1',
+  \ ],
+  \ 'sro': '::',
+  \ 'kind2scope' : {
+      \ 'n': 'module',
+      \ 's': 'struct',
+      \ 'i': 'interface',
+      \ 'c': 'implementation',
+      \ 'f': 'function',
+      \ 'g': 'enum',
+      \ 't': 'typedef',
+      \ 'v': 'variable',
+      \ 'M': 'macro',
+      \ 'm': 'field',
+      \ 'e': 'enumerator',
+      \ 'P': 'method',
+  \ },
+\ }
+
+set termguicolors
+
+" Correct RGB escape codes for vim inside tmux
+" if !has('nvim') && $TERM ==# 'screen-256color'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" endif 
