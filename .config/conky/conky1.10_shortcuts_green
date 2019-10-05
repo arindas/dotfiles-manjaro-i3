@@ -25,12 +25,12 @@ ${color2}split horizontally - ${color}mod+h
 ${color2}split vertically - ${color}mod+v
 ${color2}program menu - ${color}mod+d
 ${color2}executable menu - ${color}mod+q
-${color2}switch to workspace 1-8 - ${color}mod+1-0
-${color2}send to workspace 1-8 - ${color}mod+Shift+1-0
+${color2}switch to workspace 1-10 - ${color}mod+1-0
+${color2}send to workspace 1-10 - ${color}mod+Shift+1-0
 ${color2}change among tiled windows - ${color}mod+arrowkeys
 ${color2}change between floating/tiled - ${color}mod+space
 ${color2}toggle floating - ${color}mod+Shift+Space
 ${color2}exit - ${color}mod+Shift+e
 
-default mod=<Super>
+default mod=<Super (Windows Key)>
 ]]
