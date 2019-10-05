@@ -1,0 +1,35 @@
+conky.config = {
+	alignment = 'bottom_left',
+	background = true,
+	color2 = 'fabd2f',
+	cpu_avg_samples = 2,
+	default_color = 'b8bb26',
+	double_buffer = true,
+	font = 'Hack:size=10',
+	gap_x = 25,
+	gap_y = 45,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = false,
+  own_window_colour = '282828',
+	update_interval = 0.5,
+	use_xft = true,
+}
+
+conky.text = [[
+${color2}open new terminal - ${color}mod+Enter
+${color2}kill focused - ${color}mod+Shift+q
+${color2}split horizontally - ${color}mod+h
+${color2}split vertically - ${color}mod+v
+${color2}program menu - ${color}mod+d
+${color2}executable menu - ${color}mod+q
+${color2}switch to workspace 1-8 - ${color}mod+1-0
+${color2}send to workspace 1-8 - ${color}mod+Shift+1-0
+${color2}navigate workspace windows - ${color}mod+arrowkeys
+${color2}toggle floating - ${color}mod+Shift+Space
+${color2}exit - ${color}mod+Shift+e
+
+default mod=<Super>
+]]

@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id st  
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -42,7 +42,12 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="rofi -i -location 2 -yoffset 22 -dmenu"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="rofi -i -dmenu -sync"
+
+bindsym $mod+q exec --no-startup-id "rofi -i -show run"
+
+bindsym $mod+b exec --no-startup-id "redshift -O 4500K"
+bindsym $mod+n exec --no-startup-id "redshift -x"
 
 # change focus
 bindsym $mod+j focus left
@@ -60,7 +65,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon https://circleci.com/gh/anacrolix/dht)move right
+bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -83,7 +88,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle; 
+
+bindsym $mod+Shift+m resize set 954  594 ; move position center 
+bindsym $mod+Shift+n resize set 1900 1040; move position center
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -91,6 +99,8 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# toggle gaps
+bindsym $mod+g exec --no-startup-id ~/.local/bin/toggle_gaps 
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -155,10 +165,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -167,6 +177,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# disable touch screen
+exec --no-startup-id "xinput disable 10" 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -179,21 +192,22 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 
+# class                 border  backgr. text    indicator child_border
 
-client.focused          #665c54 #665c54 #eddbb2 #83a598   #665c54
+client.focused          #665c54 #665c54 #eddbb2 #b8bb26   #665c54
 client.focused_inactive #282828 #504945 #ffffff #484e50   #504945
 client.unfocused        #3c3836 #3c3836 #a89984 #292d2e   #222222
 client.urgent           #cc241d #cc241d #ebdbb2 #cc241d   #cc241d
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background       #000000
 
 
 
 for_window [class="^.*"] border pixel 0
 
 # new_window 1pixel
-# smart_borders on
+smart_borders on
 gaps inner 12
 # gaps outer 30
 
@@ -203,9 +217,11 @@ smart_gaps on
 # finds out, if available)
 bar {
 
+	font pango:Inconsolata, FontAwesome 9 
+
 	colors {
 		# Whole color settings
-		background #3c3836
+		background #282828
 		statusline #ebdbb2
 		separator  #a89984
 
@@ -215,27 +231,31 @@ bar {
 		inactive_workspace #504945 #504945 #ebdbb2
 		urgent_workspace   #cc241d #cc241d #ebdbb2
 	}
-
- 	# status_command i3status
-	font pango:Inconsolata 10
+ 
 	position top
-	tray_output none
-	status_command ~/.i3/bumblebee-status/bumblebee-status -m nic disk:root cpu sensors memory battery date time pasink pasource brightness -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t gruvbox-powerline 
+	# status_command i3status 
+
+	status_command ~/.i3/bumblebee-status/bumblebee-status -m title nic bluetooth disk:root cpu sensors memory battery date time pasink pasource brightness -p root.path=/ time.format="%H:%M:%S CW %V" date.format="%a, %b %d %Y"    
 }
 
-# exec --no-startup-id python powerline-lemonbar --i3
-
-# exec --no-startup-id start_conky_live_green
-
-exec --no-startup-id ~/.fehbg 
-# exec --no-startup-id nm-applet --sm-disable
+# Set background 
+# exec --no-startup-id "~/.local/bin/pscircle_draw.sh" 
 
 # Enable tapping on startup
 exec --no-startup-id xinput set-prop 15 292 1 
-# exec --no-startup-id xinput set-prop 15 293 1
 
-# exec --no-startup-id i3-battery-popup
-
+# Screenshot key binding
 bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
 
-exec --no-startup-id "compton -bc --config ~/.config/compton/compton.conf" 
+# Start compton at startup
+exec --no-startup-id "compton -bc --config ~/.config/compton/compton.conf"
+
+# Start conky at startup
+exec --no-startup-id "conky -c ~/.config/conky/Gotham" 
+exec --no-startup-id "conky -c ~/.config/conky/conky1.10_shortcuts_green"
+exec --no-startup-id "conky -c ~/.config/conky/conky1.10_shortcuts_green2"
+
+# Enable password dialogues for gui applications
+exec --no-startup-id lxpolkit 
+
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
