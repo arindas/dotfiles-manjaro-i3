@@ -251,9 +251,10 @@ bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m
 exec --no-startup-id "compton -bc --config ~/.config/compton/compton.conf"
 
 # Start conky at startup
-exec --no-startup-id "conky -c ~/.config/conky/Gotham" 
-exec --no-startup-id "conky -c ~/.config/conky/conky1.10_shortcuts_green"
-exec --no-startup-id "conky -c ~/.config/conky/conky1.10_shortcuts_green2"
+exec --no-startup-id "conky -c ~/.config/conky/time_and_date" 
+exec --no-startup-id "conky -c ~/.config/conky/shortcuts_bottom_left"
+exec --no-startup-id "conky -c ~/.config/conky/shortcuts_top_left"
+exec --no-startup-id "conky -c ~/.config/conky/resource_usage_bottom_right"
 
 # Enable password dialogues for gui applications
 exec --no-startup-id lxpolkit 
