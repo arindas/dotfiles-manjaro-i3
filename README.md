@@ -24,6 +24,6 @@ CPU: Intel i5-7200U (4) @ 3.100GHz
 GPU: Intel HD Graphics 620
 Memory: 439MiB / 7849MiB
 ```
-Wallpaper: [wallpaper](https://github.com/arindas/dotfiles/blob/master/Pictures/DesktopBackground/wallhaven-wy1lyr.jpg)
+Wallpaper: [pscircle](https://gitlab.com/mildlyparallel/pscircle)
 
 
