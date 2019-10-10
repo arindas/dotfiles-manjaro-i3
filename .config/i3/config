@@ -245,7 +245,7 @@ bar {
 exec --no-startup-id xinput set-prop 15 292 1 
 
 # Screenshot key binding
-bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png; exec --no-startup-id notify-send "Screenshot taken." 
 
 # Start compton at startup
 exec --no-startup-id "compton -bc --config ~/.config/compton/compton.conf"
@@ -258,5 +258,8 @@ exec --no-startup-id "conky -c ~/.config/conky/resource_usage_bottom_right"
 
 # Enable password dialogues for gui applications
 exec --no-startup-id lxpolkit 
+
+exec --no-startup-id "killall -q xfce4-notifyd" 
+exec --no-startup-id "dunst -c ~/.config/dunst/dunstrc" 
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
