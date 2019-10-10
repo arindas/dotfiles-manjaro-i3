@@ -22,7 +22,6 @@ Terminal: st
 Terminal Font: Hack
 CPU: Intel i5-7200U (4) @ 3.100GHz
 GPU: Intel HD Graphics 620
-Memory: 439MiB / 7849MiB
 ```
 Wallpaper: [pscircle](https://gitlab.com/mildlyparallel/pscircle)
 
