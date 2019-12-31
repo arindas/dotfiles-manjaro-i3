@@ -8,13 +8,13 @@ own_window yes
 own_window_type override 
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_colour 000000
+own_window_colour 1d2021
 own_window_argb_visual no
 own_window_argb_value 0
 
 double_buffer yes
 #minimum_size 250 5
-#maximum_width 500
+#maximum_width 590
 draw_shades no
 draw_outline no
 draw_borders no
@@ -24,7 +24,7 @@ default_shade_color red
 default_outline_color green
 alignment top_right
 gap_x 0
-gap_y 30
+gap_y 50
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -35,8 +35,9 @@ use_spacer yes
 
 minimum_size 0 0
 TEXT
-${color fbf1c7}${font Source Code Pro:pixelsize=140}${time %H:%M}${font}${voffset -84}${offset 10}${color fabd2f}${font Hack:pixelsize=42}${time %d}${voffset -15}${color fbf1c7}${font Hack:pixelsize=22}${offset 20}${time  %b} ${color fabd2f}${time %Y}${font}${voffset 24}${font Hack:pixelsize=58}${offset -172}${color b8bb26}${time %a}${font}
-${voffset 7}${offset 10}${font Hack:pixelsize=14}${color fabd2f}/:${offset 7}${color b8bb26}${fs_free /} / ${fs_size /} free${offset 25}${font Hack:pixelsize=14}${color fabd2f}/home:${offset 7}${color b8bb26}${fs_free /home} / ${fs_size /home} free${offset 25}${color fabd2f}${color fabd2f}CPU Usage:${offset 7}${color b8bb26}${cpu cpu0}%
+${color fbf1c7}${font Fantasque Sans Mono:pixelsize=140}${time %H:%M}${font}${voffset -84}${offset 10}${color fabd2f}${font Hack:pixelsize=42}${time %d}${voffset -15}${color fbf1c7}${font Fantasque Sans Mono:pixelsize=22}${offset 20}${time  %b} ${color fabd2f}${time %Y}${font}${voffset 35}${font Fantasque Sans Mono:pixelsize=58}${offset -158}${color b8bb26}${time %a}${font}
+${voffset 9}${offset 10}${font Fantasque Sans Mono:pixelsize=16}${color fabd2f}/:${offset 7}${color b8bb26}${fs_free /} / ${fs_size /} free${offset 15}${color fabd2f}/home:${offset 7}${color b8bb26}${fs_free /home} / ${fs_size /home} free${offset 15}${color fabd2f}${color fabd2f}
+#CPU Usage:${offset 7}${color b8bb26}${cpu cpu0}%
 
 
 

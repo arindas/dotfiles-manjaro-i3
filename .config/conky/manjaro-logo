@@ -1,4 +1,5 @@
 conky.config = {
+    override_utf8_locale = yes,
     alignment = 'br',
     background = true,
     border_width = 0,
@@ -10,9 +11,9 @@ conky.config = {
     draw_graph_borders = true,
     draw_shades = false,
     use_xft = true,
-    font = 'Hack:size=10',
-    gap_x = 25,
-    gap_y = 70,
+    font = 'FontAwesome:size=70',
+    gap_x = 100,
+    gap_y = 80,
     minimum_height = 0,
 	  minimum_width = 250,
     net_avg_samples = 2,
@@ -35,14 +36,6 @@ conky.config = {
 }
 
 conky.text = [[
-${color2}CPUs ${color b8bb26}1 / 2
-${color}${cpugraph cpu1 50,125 458588 FB4934 scale -t}${cpugraph cpu2 50,125 458588 FB4934 scale -t}
-${color2}CPUs ${color b8bb26}3 / 4
-${color}${cpugraph cpu3 50,125 458588 FB4934 scale -t}${cpugraph cpu4 50,125 458588 FB4934 scale -t}
-${color2}Download / Upload Speed
-${color}${downspeedgraph wlp2s0 50,125 458588 FB4934 scale -t}${color}${upspeedgraph wlp2s0 50,125 458588 FB4934 scale -t}
-${color2}Disk Usage
-${color}${diskiograph /dev/sdb 50,250 458588 FB4934 scale -t}  
-${color2}RAM Usage: ${color b8bb26}$mem / $memmax
-${color}${memgraph 50,250 458588 FB4934 scale -t}
+${font Hack:size=20}${color ffffff}~ ${color 98971a}❯${color b8bb26}❯${color fabd2f}❯
+${color}${font FuraCode Nerd Font Mono:size=100}${offset 20}${voffset -20}${font Comfortaa:size=68}manjaro
 ]]

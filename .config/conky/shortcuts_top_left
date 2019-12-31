@@ -12,8 +12,8 @@ conky.config = {
 	no_buffers = true,
 	own_window = true,
 	own_window_type = 'override',
-	own_window_transparent = false,
-  own_window_colour = '282828',
+	own_window_transparent = true,
+  own_window_colour = '1d2021',
 	update_interval = 0.5,
 	use_xft = true,
 }
@@ -21,8 +21,8 @@ conky.config = {
 conky.text = [[
 ${voffset 7}
 ${color2}resize floating window - ${color}mod+r+(arrowKeys)
-${color2}floating resize medium - ${color}mod+Shift+m
-${color2}floating resize large - ${color}mod+Shift+n
+${color2}floating resize centre - ${color}mod+Shift+m
+${color2}toggle gaps - ${color}mod+g
 ${color2}tiling mode - ${color}mod+e
 ${color2}tabbed mode - ${color}mod+w
 ${color2}stacked mode - ${color}mod+s

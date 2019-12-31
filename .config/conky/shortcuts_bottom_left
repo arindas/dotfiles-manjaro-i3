@@ -1,5 +1,5 @@
 conky.config = {
-	alignment = 'bottom_left',
+	alignment = 'bl',
 	background = true,
 	color2 = 'fabd2f',
 	cpu_avg_samples = 2,
@@ -7,13 +7,13 @@ conky.config = {
 	double_buffer = true,
 	font = 'Hack:size=10',
 	gap_x = 25,
-	gap_y = 45,
+	gap_y = 70,
 	minimum_width = 200,
 	no_buffers = true,
 	own_window = true,
 	own_window_type = 'override',
-	own_window_transparent = false,
-  own_window_colour = '282828',
+	own_window_transparent = true,
+  own_window_colour = '1d2021',
 	update_interval = 0.5,
 	use_xft = true,
 }
