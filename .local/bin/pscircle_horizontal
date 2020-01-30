@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -e
+
+output=/tmp/pscircle.png 
+
+pscircle --output=$output \
+	--background-image="$HOME/Pictures/wallpaper.png" \
+	--toplists-font-face="Fantasque Sans Mono" \
+	--toplists-font-color=fabd2f \
+  --toplists-pid-font-color=b8bb26 \
+	--tree-font-face=Inconsolata \
+	--tree-font-color=fbf1c7 \
+  --link-color-min=b16286 \
+  --link-color-max=fb4934 \
+  --dot-color-min=b8bb26 \
+  --dot-color-max=fb4934 \
+	--link-convexity=0.4 \
+	--max-children=100 \
+	--tree-font-size=12 \
+	--tree-radius-increment=350,200 \
+	--output-width=1920 \
+	--output-height=1080 \
+	--dot-radius=4 \
+	--dot-border-width=0 \
+	--link-width=2 \
+  --collapse-threads=0 \
+	--toplists-font-size=14 \
+	--toplists-row-height=20 \
+	--cpulist-center=627:-150.0 \
+	--memlist-center=627:50.0 \
+	--toplists-bar-height=5 \
+  --tree-rotate=false \
+  --tree-center=-953:-500 \
+  --tree-sector-angle=1.5707 \
+  --tree-rotate=1 \
+  --tree-rotation-angle=0 \
+  --root-pid=1 \
+  --cpulist-show=0 \
+  --memlist-show=0 \
+	
+if command -v feh > /dev/null; then
+	feh --bg-fill $output 
+	rm $output 
+fi 	

@@ -1,0 +1,63 @@
+icons = "awesome"
+
+[theme]
+name = "gruvbox-dark"
+[theme.overrides]
+good_bg = "#427b58"
+
+[[block]]
+block = "focused_window"
+max_width = 60
+
+[[block]]
+block = "docker"
+interval = 2
+format = "{running}/{total} [{images}]"
+
+[[block]]
+block = "music"
+buttons = ["prev", "play", "next"]
+
+[[block]]
+block = "cpu"
+format = "{utilization}% {frequency}GHz {barchart}"
+interval = 1
+
+[[block]]
+block = "memory"
+format_mem = "{Mum}MB/{MTm}MB({Mup}%)"
+format_swap = "{SUm}MB/{STm}MB({SUp}%)"
+display_type = "memory"
+icons = true
+clickable = true
+interval = 5
+warning_mem = 80
+warning_swap = 80
+critical_mem = 95
+critical_swap = 95
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 10
+format = "{min}° min, {max}° max, {average}° avg"
+chip = "*-isa-*"
+
+[[block]]
+block = "uptime"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "battery"
+interval = 1
+format = "{percentage}% {time}"

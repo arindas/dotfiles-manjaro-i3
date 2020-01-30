@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -90,8 +90,7 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle; 
 
-bindsym $mod+Shift+m resize set 954  594 ; move position center 
-bindsym $mod+Shift+n resize set 1900 1040; move position center
+bindsym $mod+Shift+m resize set 954  594 ; move position center  
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -179,7 +178,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # disable touch screen
-exec --no-startup-id "xinput disable 10" 
+# exec --no-startup-id "xinput disable 10" 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -194,30 +193,28 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen 
 
 # class                 border  backgr. text    indicator child_border
 
-client.focused          #665c54 #665c54 #eddbb2 #b8bb26   #665c54
-client.focused_inactive #282828 #504945 #ffffff #484e50   #504945
-client.unfocused        #3c3836 #3c3836 #a89984 #292d2e   #222222
-client.urgent           #cc241d #cc241d #ebdbb2 #cc241d   #cc241d
+client.focused          #b8bb26 #282828 #fbf1c7 #b8bb26   #282828 
+client.focused_inactive #b8bb26 #282828 #ffffff #98971a   #282828
+client.unfocused        #282828 #282828 #a89984 #79740e   #282828
+client.urgent           #cc241d #cc241d #fbf1c7 #cc241d   #cc241d
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #000000
 
-
-
 for_window [class="^.*"] border pixel 0
 
-# new_window 1pixel
 smart_borders on
 gaps inner 12
-# gaps outer 30
+gaps outer 2
 
-smart_gaps on
+# smart_gaps on
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	font pango:Fantasque Sans Mono, FontAwesome 10 
 
-	font pango:Inconsolata, FontAwesome 9 
+#  mode hide 
 
 	colors {
 		# Whole color settings
@@ -225,24 +222,59 @@ bar {
 		statusline #ebdbb2
 		separator  #a89984
 
-
+    #                  border  backgr. text
 		focused_workspace  #fbf1c7 #fbf1c7 #282828
-		active_workspace   #504945 #504945 #ebdbb2
-		inactive_workspace #504945 #504945 #ebdbb2
+		active_workspace   #282828 #282828 #fbf1c7
+		inactive_workspace #282828 #282828 #fbf1c7
 		urgent_workspace   #cc241d #cc241d #ebdbb2
 	}
  
-	position top
-	# status_command i3status 
-
-	status_command ~/.i3/bumblebee-status/bumblebee-status -m title nic bluetooth disk:root cpu sensors memory battery date time pasink pasource brightness -p root.path=/ time.format="%H:%M:%S CW %V" date.format="%a, %b %d %Y"    
+	position top 
+	status_command i3status-rs ~/.config/i3/status.toml       
 }
 
-# Set background 
-# exec --no-startup-id "~/.local/bin/pscircle_draw.sh" 
+bar {
+	font pango:Fantasque Sans Mono, FontAwesome 10 
+
+#  mode hide 
+  workspace_buttons no 
+
+	colors {
+		# Whole color settings
+		background #282828
+		statusline #ebdbb2
+		separator  #a89984
+
+    #                  border  backgr. text
+		focused_workspace  #fbf1c7 #fbf1c7 #fbf1c7
+		active_workspace   #3c3836 #3c3836 #3c3836
+		inactive_workspace #3c3836 #3c3836 #3c3836
+		urgent_workspace   #cc241d #cc241d #cc241d
+
+  }
+
+	position bottom 
+	status_command ~/.local/bin/bumblebee-status/bumblebee-status -m  nic network_traffic disk:root disk:home bluetooth kernel hostname time date  -p root.format="{path}: {used}/{size} ({percent:05.02f}%)" root.path="/" home.path='/home' home.format="{path}: {used}/{size} ({percent:05.02f}%)"  time.format="%H:%M:%S" date.format="%a, %b %d %Y" -t my-theme   
+}
+
+# set background 
+exec --no-startup-id "~/.fehbg"
+# exec --no-startup-id hsetroot -solid "#1d2021"
+# exec --no-startup-id "~/.local/bin/pscircle_horizontal"
+
+# start conky 
+# exec --no-startup-id "conky -c ~/.config/conky/shortcuts_bottom_left"
+# exec --no-startup-id "conky -c ~/.config/conky/shortcuts_top_left"
+# exec --no-startup-id "conky -c ~/.config/conky/resource_usage_bottom_right"
+# exec --no-startup-id "conky -c ~/.config/conky/time_and_date"
+# exec --no-startup-id "conky -c ~/.config/conky/manjaro-logo"
+# exec --no-startup-id "conky -c ~/.config/conky/linux-icon"
+
 
 # Enable tapping on startup
-exec --no-startup-id xinput set-prop 15 292 1 
+exec --no-startup-id xinput set-prop 15 310 1
+exec --no-startup-id xinput set-prop 15 307 1 
+exec --no-startup-id xinput set-prop 15 292 1
 
 # Screenshot key binding
 bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png; exec --no-startup-id notify-send "Screenshot taken." 
@@ -250,16 +282,11 @@ bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m
 # Start compton at startup
 exec --no-startup-id "compton -bc --config ~/.config/compton/compton.conf"
 
-# Start conky at startup
-exec --no-startup-id "conky -c ~/.config/conky/time_and_date" 
-exec --no-startup-id "conky -c ~/.config/conky/shortcuts_bottom_left"
-exec --no-startup-id "conky -c ~/.config/conky/shortcuts_top_left"
-exec --no-startup-id "conky -c ~/.config/conky/resource_usage_bottom_right"
-
 # Enable password dialogues for gui applications
 exec --no-startup-id lxpolkit 
 
 exec --no-startup-id "killall -q xfce4-notifyd" 
 exec --no-startup-id "dunst -c ~/.config/dunst/dunstrc" 
 
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+# Use pactl to start pulseaudio daemon
+exec --no-startup-id "pactl set-sink-volume 0 +0%"
