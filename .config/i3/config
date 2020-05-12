@@ -272,9 +272,10 @@ exec --no-startup-id "~/.fehbg"
 
 
 # Enable tapping on startup
-exec --no-startup-id xinput set-prop 15 310 1
-exec --no-startup-id xinput set-prop 15 307 1 
-exec --no-startup-id xinput set-prop 15 292 1
+exec --no-startup-id xinput set-prop 15 313 1
+# exec --no-startup-id xinput set-prop 15 310 1
+# exec --no-startup-id xinput set-prop 15 307 1 
+# exec --no-startup-id xinput set-prop 15 292 1
 
 # Screenshot key binding
 bindsym Print exec --no-startup-id scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png; exec --no-startup-id notify-send "Screenshot taken." 
