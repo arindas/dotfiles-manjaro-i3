@@ -1,5 +1,7 @@
 # dotfiles
 
+Note: I have shifted from Manjaro and will no longer be maintaining this repository.
+
 This repository contains all the [dot]config files for the
 following desktop:
 
