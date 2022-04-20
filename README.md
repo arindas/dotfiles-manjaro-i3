@@ -5,7 +5,7 @@ Note: I have shifted from Manjaro and will no longer be maintaining this reposit
 This repository contains all the [dot]config files for the
 following desktop:
 
-![screenshot](https://github.com/arindas/dotfiles/blob/master/Pictures/screenshots/2020-01-03_15:49:52.png)
+![screenshot](https://github.com/arindas/dotfiles-manjaro-i3/blob/master/Pictures/screenshots/2020-01-03_15:49:52.png)
 
 ```
 arindas@arubox
